@@ -25,7 +25,7 @@ export default function Loader({ timeline }: ILoader) {
             timeline
                 .add(introAnimation(wordGroupsRef))
                 .add(progressAnimation(progressRef, progressNumberRef), 0)
-                .add(collapseWords(loaderRef), "-=1");
+                .add(collapseWords(loaderRef), "-=1")
 
     }, [timeline])
 

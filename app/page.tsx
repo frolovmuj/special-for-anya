@@ -13,23 +13,13 @@ export default function Home() {
   useLayoutEffect(() => {
     const context = gsap.context(() => {
       const tl = gsap.timeline({
-        onComplete: () => {
-          setLoaderFinished(prev => !prev)
-          console.log(1);
-
-        },
+        onComplete: () => setLoaderFinished(prev => !prev)
       });
       setTimeline(tl);
     });
 
     return () => context.revert();
   }, []);
-
-  useEffect(() => {
-    console.log(loaderFinished && timeline);
-
-  }, [])
-
 
   return <main>{loaderFinished ? <TextAfterLoader /> : <Loader timeline={timeline} />}</main>
 }
