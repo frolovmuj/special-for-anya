@@ -14,6 +14,8 @@ export const introAnimation = (
   return tl;
 };
 
+
+
 export const collapseWords = (
   wordGroupsRef: RefObject<HTMLDivElement>
 ) => {

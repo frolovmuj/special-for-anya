@@ -21,5 +21,6 @@ export default function Home() {
     return () => context.revert();
   }, []);
 
+
   return <main>{loaderFinished ? <TextAfterLoader /> : <Loader timeline={timeline} />}</main>
-}
+} 
